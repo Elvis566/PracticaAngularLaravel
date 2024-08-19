@@ -1,0 +1,8 @@
+<div *ngFor="let item of dataHabitaciones">
+    <button (click)="reservar(item.id)">
+       <label for=""> Habitacion: {{item.numeroHabitacion}}</label>
+       <p>Numero de asientos disponibles: {{item.numeroAsientos}}</p>
+    </button>
+</div>
+
+<button (click)="salir()">Salir</button>

@@ -1,0 +1,23 @@
+<h1>Registro de cines</h1>
+<button><a routerLink="/habitaciones">Habitaciones</a></button>
+<br>
+<form action="">
+  <div>
+    <label >Name</label>
+    <input #name  type="text">
+  </div>
+  <div>
+    <label >Direccion</label>
+    <input #direccion  type="text">
+  </div>
+
+  <button type="button" (click)="crearCine(name, direccion)">Guardar Cine</button>
+</form>
+<br>
+<br>
+
+<div *ngFor="let item of dataCine">
+  <button (click)="pasar(item.id)">{{item.name}}</button>
+</div>
+<br>
+<br>

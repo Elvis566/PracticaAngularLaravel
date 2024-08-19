@@ -1,0 +1,16 @@
+<h1>Realize una reserva</h1>
+
+<form action="">
+    <div>
+        <Label>Asientos a rentar</Label>
+        <input #numeroAsientos type="number">
+    </div>
+
+    <button (click)="reservar(numeroAsientos)">Reservar</button>
+</form>
+
+<button (click)="escape()">Salir</button>
+
+<div *ngIf="pase">
+    <h2>{{message}}</h2>
+</div>

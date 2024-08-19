@@ -1,0 +1,25 @@
+
+<form action="">
+    <div>
+        <label for="">Numero de habitacion</label>
+        <input type="number" #numeroHabitacion>
+    </div>
+    <div>
+        <label for="">Numero de asientos</label>
+        <input type="number" #numeroAsientos>
+    </div>
+    <div>
+        <label for="">Pelicula</label>
+        <input type="text" #pelicula>
+    </div>
+    <div>
+        <label for="">Cine</label>
+        <select #cine_id>
+            @for (item of dataCine; track $index) {
+                <option value="{{item.id}}">{{item.name}}</option>
+            }  
+        </select>
+    </div>
+
+    <button (click)="crearHabitaciones(numeroHabitacion, numeroAsientos, pelicula, cine_id)">Guardar</button>
+</form>
